@@ -1,0 +1,53 @@
+@media all and (min-width: 1000px) {
+  @keyframes slide-in {
+    0% {
+      transform: translate(-37vw, -36vh) rotate(0deg) scale(0.05);
+    }
+    60% {
+      transform: translate(-120vw, 1300px) rotate(0deg) scale(1);
+    }
+    70% {
+      z-index: -1;
+      transform: translate(50vw, 120vh) rotate(-35deg);
+    }
+  }
+  @keyframes slide-out {
+    0% {
+      transform: translate(850px, 650px) rotate(-35deg) scale(1);
+    }
+    100% {
+      transform: translate(850px, 650px) rotate(180deg) scale(0);
+    }
+  }
+  .bgImg {
+    display: inline-block;
+    position: absolute;
+    pointer-events: visible;
+    transform: translate(40vw, 75vh) rotate(-30deg) scale(1.5);
+    transition: all 1s ease;
+    animation-name: slide-in;
+    animation-duration: 3s;
+    opacity: 0.5;
+    cursor: pointer;
+    width: 240px;
+  }
+  .bgImg:hover {
+    transform: translate(35vw, 65vh) rotate(-30deg) scale(1.5);
+    transition: 0.8s;
+  }
+
+  .bgImg:active {
+    transform: translate(850px, 650px) rotate(180deg) scale(0);
+    animation-name: slide-out;
+    animation-duration: 0.1s;
+  }
+  #imgBgcDiv {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+}

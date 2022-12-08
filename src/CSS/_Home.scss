@@ -1,0 +1,68 @@
+#homeTopLists {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 30px;
+}
+#homeList table {
+  text-align: center;
+  width: 100%;
+}
+#homeList table thead tr {
+  text-align: center;
+  width: 100%;
+  background-color: rgba(82, 112, 75, 0.24);
+  z-index: 1;
+}
+#homeTask td {
+  padding: 0px 10px;
+}
+#homeTask td:nth-child(2),
+#homeTask td:nth-child(1) {
+  overflow: hidden;
+  max-width: 28vw;
+}
+.homeTitles{
+  font-size: 2rem;
+}
+.homeParagraph{
+  display: none;
+}
+@media all and (min-width: 1000px) {
+  #homeList {
+    background-color: #38d27d28;
+    width: 65%;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(33, 20, 20);
+    margin: 0;
+    padding: 0;
+  }
+.homeParagraph{
+  display: block;
+}
+  #homeTopLists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+  }
+  #homeBottomLists {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  #homeTask tr:hover {
+    background-color: rgba(43, 174, 102, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.524) 0px 0.0625em 0.0625em,
+      rgba(0, 0, 0, 0.25) 0px 0.2em 0.5em,
+      rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    cursor: pointer;
+  }
+  #homeTask td:nth-child(2),
+  #homeTask td:nth-child(1) {
+    overflow: hidden;
+  }
+  #homeTopLists td:nth-child(2),
+  #homeTopLists td:nth-child(1) {
+    overflow: hidden;
+    max-width: 5vw;
+  }
+}

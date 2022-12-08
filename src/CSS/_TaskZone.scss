@@ -1,0 +1,172 @@
+@keyframes change-color {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+@keyframes change-position {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#taskList {
+  margin-top: 10px;
+  background-color: rgb(242, 242, 242);
+  z-index: 2;
+  font-size: 1.7rem;
+}
+#taskList thead tr {
+  font-size: 1.7rem;
+  padding: 5px;
+  background-color: rgba(93, 118, 107, 0.66);
+  display: none;
+}
+
+
+#task td {
+  font-size: 0.9em;
+  width: 100vw;
+  margin: auto;
+  z-index: 3;
+}
+#task td:nth-child(2) {
+  overflow: hidden;
+  font-size: 2rem;
+  font-weight: 600;
+}
+#task td:nth-child(1),td:nth-child(5) {
+  display: none;
+}
+#task td:nth-child(4) {
+  display: none;
+  overflow: hidden;
+}
+#task tr:hover {
+  background-color: rgba(43, 174, 102, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.524) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 1em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 5px inset;
+  cursor: pointer;
+  margin-bottom: 1px;
+}
+#task tr {
+  background-color: rgba(43, 174, 102, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.524) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 1em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 5px inset;
+  cursor: pointer;
+  height: 65px;
+  letter-spacing: 1px;
+}
+#taskBoxWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation-name: change-color;
+  animation-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+#taskAdd {
+  position: relative;
+  background-color: #fcf6f5ff;
+  width: 90vw;
+  height: 70%;
+  border-radius: 20px;
+  animation-name: change-position;
+  animation-duration: 1s;
+}
+#taskAdd .exit {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 3rem;
+}
+
+#taskListBox h3 {
+  padding: 5px;
+  font-size: 2.5rem;
+}
+#taskListBox button.btn {
+  padding: 0;
+  margin: 25px;
+  font-size: 1.5rem;
+width: 50%;
+}
+#taskListBox .search , select {
+  padding: 0;
+  font-size: 1.5rem;
+width: 60%;
+}
+#listForm {
+  width: 70%;
+}
+#listForm input {
+  width: 100%;
+}
+
+.listTitle:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px 2px;
+}
+#allTasksBar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 10px;
+  overflow-x: auto;
+}
+#allTasksBar div {
+  flex-direction: row;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+@media all and (min-width: 1000px) {
+  #taskList {
+    font-size: 1.7rem;
+    white-space: nowrap;
+  }
+  #taskList thead tr  {
+    display: table-row;
+  }
+  #task td:nth-child(1),td:nth-child(3),td:nth-child(4),td:nth-child(5) {
+    display: table-cell;
+  }
+  #taskList thead tr :nth-child(4) {
+    display: contents;
+  }
+  #task td:nth-child(4) {
+    display: contents;
+  }
+  #taskAdd {
+    width: 50vw;
+    height: 90vh;
+    z-index: 2;
+  }
+  #taskAdd .exit {
+    position: absolute;
+    right: 3vw;
+    top: 3vh;
+    cursor: pointer;
+  }
+  #taskAdd h2 {
+    padding-bottom: 20px;
+  }
+  #task tr {
+  background-color: inherit;
+  box-shadow: inherit;
+  cursor: pointer;
+  height: 65px;
+  letter-spacing: 1px;
+}
+}
